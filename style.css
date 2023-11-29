@@ -1,0 +1,264 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Marhey', sans-serif;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+.page{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,.75),rgba(0,1,0,.75));
+    display: flex;
+    justify-content: center;
+}
+.page .in {
+    width: 60%;
+    height: 100vh;
+    background-color: red;
+    display: grid;
+    grid-template-rows: 10vh 90vh;
+    /* visibility: hidden; */
+}
+.page .in::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: #0000004d;
+}
+.page .in .main {
+    display: grid;
+    grid-template-rows: 93% 7%;
+    background-color: wheat;
+    background: url(photo.jpg);
+    background-size: cover;
+}
+.page .in .main .texting {
+    width: 99%;
+    height: 100%;
+    background-color: #ffffff00;
+    display: grid;
+    grid-template-columns: 94% 6%;
+    /* grid-column-gap: 10px; */
+    align-items: center;
+    justify-items: center;
+}
+.page .in .main .texting .mic {
+    /* padding: 0px 0px; */
+    width: 100%;
+    height: 85%;
+    background-color: seagreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    font-size: larger;
+    /* margin: 0px 0px; */
+}
+.page .in .main .texting i{
+    font-size: x-large;
+}
+.page .in .main .texting .type {
+    width: 98%;
+    height: 90%;
+    border-radius: 20px;
+    background-color: #8bc34a;
+    display: grid;
+    grid-template-columns: 1fr 9fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+.page .in .main .texting .type input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    font-size: x-large;
+    font-family: emoji;
+}
+.page .in .lable {
+    width: 100%;
+    height: 10vh;
+    background-color: #d1d7db;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+}
+.page .in .lable .contact {
+    display: flex;
+    width: 40%;
+    height: 100%;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-size: small;
+}
+.page .in .lable .information {
+    display: flex;
+    width: 35%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.page .in .lable .information .pic {
+    background-image: url(photo.jpg);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+/* page out 888888888888888888888888888888888888888888888888888888888888888888*/
+.page .out{
+    width: 40%;
+    height: 100vh;
+    background: blue;
+}
+.page .out .lable {
+    width: 100%;
+    height: 10vh;
+    background-color: #d1d7db;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+}
+.page .out .lable .pic{
+    background-image: url(photo.jpg);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin: 0 2%;
+}
+.page .out .lable .contact {
+    display: flex;
+    width: 50%;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-size: smaller;
+}
+.in .lable .contact .icon {
+    display: flex;
+    position: relative;
+    width: 20%;
+    justify-content: center;
+    cursor: pointer;
+}
+.in .lable .contact .icon .item{
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.in .lable .contact .icon:hover .item{
+    opacity: 1;
+    pointer-events: auto;
+    top: 200%;
+}
+/*end of the lable bar 888888888888888888888888888888888888888888888888888888888888*/
+.page .out .list {
+    width: 100%;
+    height: 90vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    position: relative;
+}
+.page .out .list .con{
+    background-color: whitesmoke;
+    display: flex;
+    width: 100%;
+}
+.page .out .list .con::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 1px;
+    background-color: #3733334a;
+    margin: auto;
+    right: 10%;
+}
+.page .out .list .con:hover{
+    background-color: rgb(211, 210, 210);
+}
+.page .out .list .con .right {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    margin: 0 5%;
+    display: grid;
+    grid-template-columns: .2fr 1fr;
+    align-items: center;
+    grid-gap: 3%;
+}
+.page .out .list .con .right .pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-image: url(photo.jpg);
+    background-size: cover;
+    border: 1px black solid;
+}
+.page .out .list .con .left {
+    width: 20%;
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+.page .out .list .con .left i{
+    transform: rotate(45deg);
+}
+/* finish the contact list */
+.mas {
+    /* max-width: 85%; */
+    width: fit-content;
+    background: #73f273cf;
+    border-radius: 20px;
+    padding: 11px;
+    border-top-left-radius: 0;
+    position: relative;
+}
+.extra {
+    width: 0;
+    height: 0;
+    border-right: 5px solid #6bd064;
+    border-left: 5px solid #f1f1f100;
+    border-bottom: 5px solid #fbfbfb00;
+    border-top: 5px solid #73d76a;
+    position: absolute;
+    top: 0;
+    left: -10px;
+}
+.r {
+    max-width: 85%;
+    margin: 10px 0;
+}
+/* The chat area */
+@media(max-width : 425px){
+    .page .in {
+        display: none;
+    }
+    .page .out {
+        width: 100%;
+        font-size: small;
+    }
+    .page .out .lable .pic{
+        width: 40px;
+        height: 40px;
+    }
+    .page .out .list .con .right .pic{
+        width: 35px;
+        height: 35px;
+    }
+}
